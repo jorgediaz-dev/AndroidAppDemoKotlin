@@ -1,13 +1,22 @@
 package com.co.androidappdemokotlin
 
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
-class MainActivity : AppCompatActivity(), NewMovieFragment.OnFragmentInteractionListener {
+class MainActivity : AppCompatActivity(), NewMovieFragment.OnFragmentInteractionListener, MovieListFragment.OnFragmentInteractionListener {
 
-    override fun onFragmentInteraction(uri: Uri) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun goToMovieListFragment() {
+        val manager = supportFragmentManager
+        val transaction = manager.beginTransaction()
+        transaction.replace(R.id.flContent, MovieListFragment.newInstance())
+        transaction.commit()
+    }
+
+    override fun goToNewMovieFragment() {
+        val manager = supportFragmentManager
+        val transaction = manager.beginTransaction()
+        transaction.replace(R.id.flContent, NewMovieFragment.newInstance())
+        transaction.commit()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,10 +24,7 @@ class MainActivity : AppCompatActivity(), NewMovieFragment.OnFragmentInteraction
         setContentView(R.layout.activity_main)
 
         if (savedInstanceState == null) {
-            val manager = supportFragmentManager
-            val transaction = manager.beginTransaction()
-            transaction.replace(R.id.flContent, NewMovieFragment.newInstance())
-            transaction.commit()
+            goToMovieListFragment()
         }
     }
 }
