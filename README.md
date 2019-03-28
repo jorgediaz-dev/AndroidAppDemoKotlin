@@ -12,6 +12,4 @@ Tutorial from DZone.com
 
 ## [5. Input Validation and Navigation (Part 5)](https://dzone.com/articles/introduction-to-android-app-development-with-kotli-4)
 
-
-
-
+## [6. MVVM Architecture (Part 6)](https://dzone.com/articles/introduction-to-android-app-development-with-kotli-5)
