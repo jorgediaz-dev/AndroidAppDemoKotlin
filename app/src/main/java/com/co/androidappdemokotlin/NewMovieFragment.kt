@@ -7,6 +7,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import kotlinx.android.synthetic.main.fragment_new_movie.*
+
 // TODO: Rename parameter arguments, choose names that match
 
 /**
@@ -32,6 +35,14 @@ class NewMovieFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_new_movie, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        button.setOnClickListener {
+            Toast.makeText(activity, editText.text.toString(), Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onAttach(context: Context) {
