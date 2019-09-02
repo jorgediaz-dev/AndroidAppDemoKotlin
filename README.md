@@ -14,4 +14,8 @@ Tutorial from DZone.com
 
 ## [6. MVVM Architecture (Part 6)](https://dzone.com/articles/introduction-to-android-app-development-with-kotli-5)
 
-## [6. Room Database (Part 7)](https://dzone.com/articles/introduction-to-android-app-development-with-kotli-6)
+## [7. Room Database (Part 7)](https://dzone.com/articles/introduction-to-android-app-development-with-kotli-6)
+
+## [8. Store Data in Database (Part 8)](https://dzone.com/articles/introduction-to-android-app-development-with-kotli-7)
+
+
