@@ -18,4 +18,5 @@ Tutorial from DZone.com
 
 ## [8. Store Data in Database (Part 8)](https://dzone.com/articles/introduction-to-android-app-development-with-kotli-7)
 
+## [9. Retrieve Data From Room (Part 9)](https://dzone.com/articles/introduction-to-android-app-development-with-kotli-8)
 
