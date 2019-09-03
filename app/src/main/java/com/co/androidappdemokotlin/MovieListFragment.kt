@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProviders
 import kotlinx.android.synthetic.main.fragment_movie_list.*
 
 /**
@@ -21,8 +22,13 @@ class MovieListFragment : Fragment() {
 
     private var listener: OnFragmentInteractionListener? = null
 
+    private lateinit var mViewModel: NewMovieViewModel
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        mViewModel = ViewModelProviders.of(this).get(NewMovieViewModel::class.java)
+        mViewModel.retrieveMovies()
     }
 
     override fun onCreateView(
