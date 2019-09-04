@@ -6,8 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import kotlinx.android.synthetic.main.fragment_movie_list.*
+import timber.log.Timber
 
 /**
  * A simple [Fragment] subclass.
@@ -28,7 +30,9 @@ class MovieListFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         mViewModel = ViewModelProviders.of(this).get(NewMovieViewModel::class.java)
-        mViewModel.retrieveMovies()
+        mViewModel.retrieveMovies().observe(this, Observer {
+            Timber.i("Received the movies ${it.size}")
+        })
     }
 
     override fun onCreateView(

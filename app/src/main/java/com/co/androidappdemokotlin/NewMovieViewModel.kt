@@ -2,6 +2,8 @@ package com.co.androidappdemokotlin
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.co.androidappdemokotlin.data.AppDatabase
 import com.co.androidappdemokotlin.data.Movie
 import kotlinx.coroutines.GlobalScope
@@ -12,6 +14,8 @@ class NewMovieViewModel(application : Application) : AndroidViewModel(applicatio
 
     private val mDb: AppDatabase? = AppDatabase.getInstance(application)
 
+    val allMovies = MutableLiveData<List<Movie>>()
+
     fun storeMovie(title: String) {
         val movie = Movie()
         movie.name = title
@@ -21,12 +25,14 @@ class NewMovieViewModel(application : Application) : AndroidViewModel(applicatio
         }
     }
 
-    fun retrieveMovies(){
+    fun retrieveMovies(): LiveData<List<Movie>>{
 
         GlobalScope.launch {
             val  list = mDb?.movieDao()?.getAll()
             Timber.i("retrieveMovies list count {${list?.size}}")
+            allMovies.postValue(list)
         }
+        return  allMovies
     }
 
 }
