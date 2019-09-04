@@ -20,3 +20,4 @@ Tutorial from DZone.com
 
 ## [9. Retrieve Data From Room (Part 9)](https://dzone.com/articles/introduction-to-android-app-development-with-kotli-8)
 
+## [10. Live Data (Part 10)](https://dzone.com/articles/introduction-to-android-app-development-with-kotli-9)
