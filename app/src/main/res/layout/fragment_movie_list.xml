@@ -7,12 +7,22 @@
                 tools:context=".MovieListFragment">
 
     <TextView android:layout_width="match_parent"
+            android:id="@+id/tvTitle"
               android:layout_height="wrap_content"
               android:textSize="30sp"
-              android:text="Movie List"
+              android:text="@string/movie_list"
     />
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tvTitle"
+            android:layout_above="@id/btnAdd"
+            />
+
     <Button android:id="@+id/btnAdd"
-            android:text="Add new movie"
+            android:text="@string/btn_add_new_movie"
             android:layout_alignParentBottom="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
