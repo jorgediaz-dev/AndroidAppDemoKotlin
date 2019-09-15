@@ -5,4 +5,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="movie_list">Movie List</string>
     <string name="btn_add_new_movie">Add new movie</string>
+    <string name="rv_hint_item">item</string>
 </resources>

@@ -31,8 +31,11 @@ class MovieListFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         mViewModel = ViewModelProviders.of(this).get(NewMovieViewModel::class.java)
+
         mViewModel.retrieveMovies().observe(this, Observer {
             Timber.i("Received the movies ${it.size}")
+
+            rvList.adapter = MovieRecyclerAdapter(it)
         })
     }
 
