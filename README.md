@@ -23,3 +23,6 @@ Tutorial from DZone.com
 ## [10. Live Data (Part 10)](https://dzone.com/articles/introduction-to-android-app-development-with-kotli-9)
 
 ## [11. RecyclerView Widget (Part 11)](https://dzone.com/articles/introduction-to-android-app-development-with-kotli-10)
+
+## [12. Recycler Adapter (Part 12)](https://dzone.com/articles/introduction-to-android-app-development-with-kotli-11)
+
